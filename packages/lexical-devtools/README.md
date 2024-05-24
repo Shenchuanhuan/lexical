@@ -2,10 +2,14 @@
 
 This is the source code for the Lexical DevTools browser extension.
 
+[link-chrome]: https://chromewebstore.google.com/detail/lexical-developer-tools/kgljmdocanfjckcgfpcpdoklodllfdpc 'Version published on Chrome Web Store'
 [link-edge]: https://microsoftedge.microsoft.com/addons/detail/lexical-developer-tools/pclbkaofdgafcfhlnimcdhhkkhcabpcb 'Version published on Edge Add-ons Store'
 [link-firefox]: https://addons.mozilla.org/en-US/firefox/addon/lexical-developer-tools/ 'Version published on Mozilla Add-ons'
 
-[<img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.1.0/edge/edge.svg" width="48" alt="Chrome" valign="middle">][link-edge] [<img valign="middle" src="https://img.shields.io/badge/dynamic/json?label=%20&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpclbkaofdgafcfhlnimcdhhkkhcabpcb">][link-edge]
+[<img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.1.0/chrome/chrome.svg" width="48" alt="Chrome" valign="middle">][link-chrome] [<img valign="middle" src="https://img.shields.io/chrome-web-store/v/kgljmdocanfjckcgfpcpdoklodllfdpc?style=flat&label=%20
+">][link-chrome]
+
+[<img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.1.0/edge/edge.svg" width="48" alt="Edge" valign="middle">][link-edge] [<img valign="middle" src="https://img.shields.io/badge/dynamic/json?label=%20&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fpclbkaofdgafcfhlnimcdhhkkhcabpcb">][link-edge]
 
 [<img src="https://cdnjs.cloudflare.com/ajax/libs/browser-logos/74.1.0/firefox/firefox.svg" width="48" alt="Firefox" valign="middle">][link-firefox] [<img valign="middle" src="https://img.shields.io/amo/v/lexical-developer-tools.svg?label=%20">][link-firefox]
 
@@ -45,6 +49,20 @@ npm run dev:safari
 BUILD_VERSION=0 npm run safari:archive 
 PASSWORD="XXX" npm run safari:upload
 ```
+
+## Publishing flow
+
+**Preconditions:**
+
+If new version of the extension contains big changes to it's UI or functionality, before proceeding, go to the web UI of every marketplace and update screenshots and preview videos.
+
+**Firefox, Edge:**
+
+Go to the ["Publish DevTools extension to stores" GitHub action](https://github.com/facebook/lexical/actions/workflows/devtools-extension-publish.yml) and start it manually. Increase "Build version" in case publish happens more than once within single Lexical monorepo version.
+
+**Chrome, Safari:**
+
+Automation is pending, pls contact vladlen_fedosov@epam.com
 
 ## Design
 
