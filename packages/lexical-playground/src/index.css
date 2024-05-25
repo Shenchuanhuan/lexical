@@ -73,7 +73,7 @@ header h1 {
 }
 
 .editor-scroller {
-  min-height: 150px;
+  min-height: 650px;
   border: 0;
   display: flex;
   position: relative;
